@@ -1,17 +1,3 @@
-// import Appointment from './Appointment.js'
-// function Tile(props) {
-//   return (
-//     <div className="Tile">
-//       <h1>{props.area} {props.type}</h1>
-//       <h2>{props.price}</h2>
-//       <img className='image' src ={props.image}></img>
-//         <Appointment/>
-//     </div>
-//   );
-// }
-
-// export default Tile;
-
 import Appointment from "./Appointment.js";
 import React, { useState } from 'react';
 function Tile(props) {
@@ -20,10 +6,11 @@ function Tile(props) {
     return (
       <div className='Tile'>
         <h1>
-          {props.area} {props.price} {props.type}
+         {props.name} {props.area} {props.price} {props.type} {props.id}
         </h1>
         <img className='image' alt='' src={props.image} />
-        <Appointment />
+        <Appointment id ={props.id} />
+ 
         <button
           onClick={() => {
             setView(false);
